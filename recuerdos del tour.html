@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Recuerdos del tour</title>
+    <meta name="description" content="Muestras" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/LOGO THE ERAS.ico" type="image/x-icon" />
+    <meta name="author" content="Nombre y Apellido">
+    <link rel="stylesheet" href="estilos/estilos.css" />
+    
+    <!-- Incluir jQuery (versión moderna) desde un CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Incluir Fancybox 3 (última versión estable) desde un CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #2e324f;
+            color: #FFF;
+            font-family: "adineue PRO";
+            font-size: 1em;
+            text-align: center;
+        }
+
+        header img {
+            width: 60%;
+            height: auto;
+            max-width: 400px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 30px auto;
+        }
+
+        nav a {
+            margin: 0 18px;
+            text-decoration: none;
+            color: #1F2135;
+            font-size: 1.5em;
+            background-color: #d0d0d0;
+            padding: 4px 9px;
+            border-radius: 20px;
+            min-width: 100px;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #d0d0d0;
+        }
+
+        #contenido {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #fff;
+            font-family: ROSSETI;
+            font-size: 1.5em;
+            margin: 10px 0;
+            text-align: center;
+            padding-bottom: center;
+        }
+
+        section#trabajos {
+            background: #1F2135;
+            border-radius: .5em;
+            margin: 0 auto;
+            max-width: 80%;
+            padding: .5em;
+            text-align: center;
+        }
+
+        .portafolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        article {
+            background: #1F2135;
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            min-width: 280px;
+            text-align: justify;
+            margin-bottom: 5em;
+        }
+
+        article h3 {
+            font-size: 1.3em;
+            color: #fff;
+        }
+
+        article p {
+            color: #d0d0d0;
+        }
+
+        footer {
+            background: #2e324f;
+            color: #FFF;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.6em;
+            font-family: 'Rosseti', sans-serif;
+        }
+
+        footer a {
+            color: #FFF;
+            margin: 0 10px;
+        }
+
+        .redonda {
+            border-radius: 3.125em;
+            box-shadow: 3px 3px 7px rgba(255, 255, 255, .3);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img class="side-image" src="img/izq.png" alt="Imagen Izquierda" />
+            <h1>
+                <a href="inicio.html">
+                    <img class="fade" alt="Logo The Eras" src="img/LOGO THE ERAS (1).png" />
+                </a>
+            </h1>
+            <img class="side-image" src="img/der.png" alt="Imagen Derecha" />
+        </div>
+    </header>
+
+    <nav>
+        <a href="inicio.html">INICIO</a>
+        <a href="sobre la gira.html">SOBRE LA GIRA</a>
+        <a href="contenido exclusivo.html">CONTENIDO EXCLUSIVO</a>
+        <a href="recuerdos del tour.html">RECUERDOS DEL TOUR</a>
+        <a href="proximo concierto.html">PRÓXIMO CONCIERTO</a>
+    </nav>
+
+    <section id="contenido">
+        <section id="trabajos">
+            <h2>MOMENTOS INNOLVIDABLES DEL TOUR</h2>
+
+          <div class="portafolio">
+    <article>
+        <a data-fancybox="gallery" href="img/GALERIA/1.png" data-caption="Un momento emocional del tour, donde Taylor deslumbra al público con esta canción de su álbum 'Folklore'.">
+            <img class="redonda" src="img/GALERIA/1.png" alt="MY TEARS RICOCHET PERFORMANCE" width="100" height="100">
+        </a>
+    </article>
+    <article>
+        <a data-fancybox="gallery" href="img/GALERIA/2.png" data-caption="Una noche mágica bajo las luces, Taylor interpreta su éxito 'Lover' mientras el escenario se llena de corazones flotantes.">
+            <img class="redonda" src="img/GALERIA/2.png" alt="LOVER PERFORMANCE" width="100" height="100">
+        </a>
+    </article>
+    <article>
+        <a data-fancybox="gallery" href="img/GALERIA/3.png" data-caption="La energía juvenil se desborda mientras Taylor canta 'August' y el público la sigue en cada nota de esta emotiva canción.">
+            <img class="redonda" src="img/GALERIA/3.png" alt="AUGUST PERFORMANCE" width="100" height="100">
+        </a>
+    </article>
+    <article>
+        <a data-fancybox="gallery" href="img/GALERIA/4.png" data-caption="Un momento de ensueño en el que Taylor canta 'Enchanted', rodeada de una atmósfera mágica y llena de emoción.">
+            <img class="redonda" src="img/GALERIA/4.png" alt="ENCHANTED PERFORMANCE" width="100" height="100">
+        </a>
+    </article>
+    <article>
+        <a data-fancybox="gallery" href="img/GALERIA/5.png" data-caption="Una interpretación única de 'Midnight Rain', con luces tenues y una puesta en escena emocionalmente profunda.">
+            <img class="redonda" src="img/GALERIA/5.png" alt="MIDNIGHT RAIN PERFORMANCE" width="100" height="100">
+        </a>
+    </article>
+</div>
+
+<div class="portafolio">
+    <article>
+        <a data-fancybox="gallery" href="img/GALERIA/6.png" data-caption="En un épico momento de colaboración, Taylor y Ed Sheeran interpretan 'End Game', deslumbrando a los fans con su química en el escenario.">
+            <img class="redonda" src="img/GALERIA/6.png" alt="TS x ED SHEERAN" width="100" height="100">
+        </a>
+    </article>
+    <article>
+        <a data-fancybox="gallery" href="img/GALERIA/7.png" data-caption="Taylor y Jack Antonoff unen fuerzas para interpretar 'The Archer', creando un ambiente íntimo lleno de emoción y armonía.">
+            <img class="redonda" src="img/GALERIA/7.png" alt="TS x JACK ANTONOFF" width="100" height="100">
+        </a>
+    </article>
+    <article>
+        <a data-fancybox="gallery" href="img/GALERIA/8.png" data-caption="Un dueto inesperado en el escenario con Sabrina Carpenter interpretando 'We’re All In This Together', un homenaje a la juventud.">
+            <img class="redonda" src="img/GALERIA/8.png" alt="TS x SABRINA CARPENTER" width="100" height="100">
+        </a>
+    </article>
+    <article>
+        <a data-fancybox="gallery" href="img/GALERIA/9.png" data-caption="La unión de dos grandes voces en una interpretación única de 'The Only Exception', creando una atmósfera épica de emociones compartidas.">
+            <img class="redonda" src="img/GALERIA/9.png" alt="TS x HAILEY WILLIAMS" width="100" height="100">
+        </a>
+    </article>
+    <article>
+        <a data-fancybox="gallery" href="img/GALERIA/10.png" data-caption="Taylor y Gracie Abrams crean una atmósfera nostálgica con 'Good Riddance', una interpretación llena de sentimientos agridulces.">
+            <img class="redonda" src="img/GALERIA/10.png" alt="TS x GRACIE ABRAMS" width="100" height="100">
+        </a>
+    </article>
+</div>
+
+        </section>
+    </section>
+
+    <footer style="background: #2e324f; color: #FFF; padding: 20px; text-align: center; font-size: 0.6em; font-family: 'adineue PRO'">
+        <div>
+            <p>© 2024 The Eras Tour. Todos los derechos reservados.</p>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <a href="https://www.instagram.com/taylorswift/" target="_blank" style="color: #FFF; margin: 0 10px;">Instagram</a>
+            <a href="https://x.com/taylorswift13" target="_blank" style="color: #FFF; margin: 0 10px;">X</a>
+            <a href="https://www.facebook.com/TaylorSwift/" target="_blank" style="color: #FFF; margin: 0 10px;">Facebook</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

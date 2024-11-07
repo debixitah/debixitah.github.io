@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Próximo concierto</title>
+    <meta name="description" content="Muestras" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/LOGO THE ERAS.ico" type="image/x-icon" />
+    <meta name="author" content="Nombre y Apellido">
+    <link rel="stylesheet" href="estilos/estilos.css" />
+    
+    <!-- Incluir jQuery (versión moderna) desde un CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Incluir Fancybox 3 (última versión estable) desde un CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #2e324f;
+    color: #FFF;
+    font-family: "adineue PRO";
+    font-size: 1em;
+    text-align: center;
+}
+/* Contenedor principal */
+#contenido {
+    display: flex; /* Usamos flexbox para que los elementos se alineen en fila */
+    justify-content:flex-end; /* Espacio entre las secciones */
+    gap: 1em; /* Sin espacio entre las secciones */
+    padding: 20px;
+    flex-wrap: wrap; /* Para pantallas pequeñas, que las secciones se apilen */
+}
+
+/* Las secciones principales */
+section#contacto,
+section#mapa {
+    background: #1F2135; /* Fondo morado */
+    border-radius: .5em; /* Bordes redondeados */
+    display: inline-block; /* Se comporta como un bloque en línea */
+    min-height: 350px;
+    padding: 0.5em;
+    width: 48%; /* Controla el ancho de cada sección */
+    margin: 0; /* Eliminamos márgenes entre las secciones */
+}
+
+/* Ajuste para el mapa para que se adapte al tamaño de la sección */
+section#mapa iframe {
+    width: 100%; /* El iframe ocupa el 100% del ancho de la sección */
+    border-radius: .5em; /* Bordes redondeados en el iframe */
+    height: 100%; /* Ajusta la altura */
+}
+
+/* Responsividad: cuando la pantalla es pequeña, las secciones se apilan */
+@media (max-width: 768px) {
+    #contenido {
+        flex-direction: column; /* Las secciones se apilan */
+        align-items: center; /* Centramos las secciones */
+    }
+
+    section#contacto,
+    section#mapa {
+        width: 90%; /* Ocupan el 90% del ancho en pantallas pequeñas */
+        margin-bottom: 20px; /* Espacio entre las secciones */
+    }
+
+    section#mapa iframe {
+        height: 300px; /* Ajustar la altura del mapa */
+    }
+}
+
+form {
+    background: #d0d0d0;
+    color: #1F2135;
+    padding: 1em;
+    border-radius: .5em;
+}
+
+/* Estado normal del botón "Enviar" */
+input[type="submit"] {
+    background: #2e324f;
+    border-radius: .25em;
+    color: #fff;
+    font-size: 1.7em;
+    padding: .25em;
+    font-family:ROSSETI;  /* Aplica la fuente Rossetti */
+	align-items: center;
+	margin: 0 auto; 
+	display: inline-block; 
+}
+
+/* Estado hover del botón "Enviar" */
+input[type="submit"]:hover {
+    background: #fff;
+    border-radius: .25em;
+    color: #2e324f;
+    cursor: pointer;
+    font-family:ROSSETI;  /* Aplica la fuente Rossetti en hover */
+    font-size: 1.7em; /* Cambia el tamaño de la fuente en hover */
+}
+
+
+textarea {
+    background: #EEE;
+    border-radius: .25em;
+    color: #2e324f;
+    font-size: 1em;
+    padding: .25em;
+    width: 95%;
+}
+
+textarea:focus {
+    background: #fff;
+}
+/* Cambiar color de texto de los datos de contacto */
+#info-contacto .datos-contacto, 
+#info-contacto .datos-contacto-bold {
+    color: #fff; /* Cambiar el color del texto a blanco */
+}
+
+/* Cambiar color de los enlaces de redes sociales a blanco */
+#info-contacto .fade {
+    color: #fff; /* Cambiar el color de los enlaces a blanco */
+    text-decoration: none; /* Aseguramos que no haya subrayado */
+}
+
+/* Cambiar color de los enlaces de redes sociales al pasar el mouse */
+#info-contacto .fade:hover {
+    color: #d0d0d0; /* Color gris claro al pasar el mouse */
+}
+
+/* Ajustar tamaño de los íconos de redes sociales */
+#info-contacto img {
+    width: 30px; /* Ajusta el tamaño de los íconos */
+    height: auto;
+    margin: 0 10px; /* Espaciado entre los íconos */
+}
+/* Centrar el título de la sección */
+#contacto h2 {
+    text-align: center; /* Centra el texto dentro del contenedor */
+    font-size: 2em; /* Ajusta el tamaño del título */
+    color: #fff; /* Color blanco para el título */
+    margin-bottom: 0.2em; /* Espaciado debajo del título */
+}
+
+/* Aseguramos que la sección de contacto ocupe el espacio completo y tenga padding adecuado */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos dentro de la sección */
+    justify-content: center;
+    padding: 20px;
+    background-color: #1F2135; /* Color de fondo de la sección */
+    border-radius: 10px;
+    margin: 0 auto; /* Centra la sección en la página */
+    max-width: 80%; /* Limita el ancho de la sección */
+}
+legend {
+    font-family:ROSSETI;/* Aplica la fuente Rossetti */
+    font-size: 2em; /* Ajusta el tamaño de la fuente, puedes cambiarlo a tu gusto */
+    color: #2e324f; /* Color blanco (puedes ajustarlo según tus preferencias) */
+    margin-bottom: 1em; /* Un poco de espacio debajo del legend */
+}
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img class="side-image" src="img/izq.png" alt="Imagen Izquierda" />
+            <h1>
+                <a href="inicio.html">
+                    <img class="fade" alt="Logo The Eras" src="img/LOGO THE ERAS (1).png" />
+                </a>
+            </h1>
+            <img class="side-image" src="img/der.png" alt="Imagen Derecha" />
+        </div>
+    </header>
+
+    <nav>
+        <a href="inicio.html">INICIO</a>
+        <a href="sobre la gira.html">SOBRE LA GIRA</a>
+        <a href="contenido exclusivo.html">CONTENIDO EXCLUSIVO</a>
+        <a href="recuerdos del tour.html">RECUERDOS DEL TOUR</a>
+        <a href="proximo concierto.html">PRÓXIMO CONCIERTO</a>
+    </nav>
+
+  <section id="contenido">
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <article id="info-contacto">
+            <p>
+                <span class="datos-contacto-bold">Email:</span>
+                <span class="datos-contacto">theerastour.com</span>
+                <br/> 
+                <span class="datos-contacto-bold">Comunícate con nosotros:</span>
+                <span class="datos-contacto">0-800-1313</span>
+                <br/> 
+                <span class="datos-contacto-bold">Web:</span>
+                <span class="datos-contacto">https://www.taylorswift.com/tour/</span>
+                <br/> 
+                <span class="datos-contacto-bold">Próxima parada:</span>
+                <span class="datos-contacto">1 Blue Jays Way, Toronto, ON M5V 1J1, Canadá</span>
+                <br/> 
+                <span class="datos-contacto-bold">Social Media:</span>
+                <br/>
+                <a class="fade" href="https://www.facebook.com/TaylorSwift" title="Facebook" target="_blank">
+    <img src="2023_Facebook_icon.svg.png" alt="Facebook" />
+</a>
+<a class="fade" href="https://twitter.com/taylorswift13" title="X (Twitter)" target="_blank">
+    <img src="1725374683twitter-x-logo.png" alt="Twitter" />
+</a>
+<a class="fade" href="https://www.instagram.com/taylorswift/" title="Instagram" target="_blank">
+    <img src="Instagram_logo_2022.svg.png" alt="Instagram" />
+</a>
+<a class="fade" href="https://www.youtube.com/user/TaylorSwift" title="YouTube" target="_blank">
+    <img class="youtube-img" src="Youtube_logo.png" alt="YouTube" />
+</a>
+
+            </p>
+        </article>
+
+        <article id="contactanos">
+            <form>
+                <fieldset>
+                    <legend>¡PARTICIPA PARA UNA DE LAS 5 ENTRADAS DOBLES!</legend>
+                    <div>
+                        <label for="nombre">Nombre: </label>
+                        <textarea id="nombre" class="fade" name="nombre_txt" cols="31" rows="1" required></textarea>
+                    </div>
+                    <div>
+                        <label for="email">Email: </label>
+                        <textarea id="email" class="fade" name="email_txt" cols="31" rows="1" required></textarea>
+                    </div>
+                    <div>
+                        <label for="movil">Móvil: </label>
+                        <textarea id="movil" class="fade" name="movil_txt" cols="31" rows="1" required></textarea>
+                    </div>
+                    <div>
+                        <label for="asunto">Asunto: </label>
+                        <textarea id="asunto" class="fade" name="asunto_txt" cols="31" rows="1" required></textarea>
+                    </div>
+                    <div>
+                        <label for="comentarios">Comentarios: </label>
+                        <textarea id="comentarios" class="fade" name="comentarios_txa" cols="31" rows="5" required></textarea>
+                    </div>
+                    <div class="boton-container">
+                        <input type="submit" id="ENVIAR" class="fade" name="enviar_btn" value="ENVIAR" />
+                    </div>
+                </fieldset>
+            </form>
+        </article>
+    </section>
+
+    <section id="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.316661992973!2d-79.39200848837253!3d43.64157965306197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d7b66a4a51%3A0xe210b2f6fe0b1405!2sRogers%20Centre!5e0!3m2!1ses!2spe!4v1730964556596!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+</section>
+
+    <footer style="background: #2e324f; color: #FFF; padding: 20px; text-align: center; font-size: 0.6em; font-family: 'adineue PRO'">
+        <div>
+            <p>© 2024 The Eras Tour. Todos los derechos reservados.</p>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <a href="https://www.instagram.com/taylorswift/" target="_blank" style="color: #FFF; margin: 0 10px;">Instagram</a>
+            <a href="https://x.com/taylorswift13" target="_blank" style="color: #FFF; margin: 0 10px;">X</a>
+            <a href="https://www.facebook.com/TaylorSwift/" target="_blank" style="color: #FFF; margin: 0 10px;">Facebook</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+    <meta charset="utf-8">
+    <title>Contenido exclusivo</title>
+    <meta name="description" content="Muestras"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/LOGO THE ERAS.ico" type="image/x-icon" />
+    <meta name="author" content="Nombre y Apellido">
+    <link rel="stylesheet" href="estilos/estilos.css" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
+    <link rel="stylesheet" href="css/fancybox.css" />
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>
+<!-- Load the jQuery MouseWheel plugin -->
+<script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
+<!-- Load the FancyBox plugin -->
+
+<script>
+$(document).ready(function() {
+  $("a[rel=trabajos]").fancybox({
+    'transitionIn': 'fade',
+    'transitionOut': 'elastic',
+    'titlePosition': 'over',
+    'titleFormat': function(title, currentArray, currentIndex, currentOpts) {
+      return '<span id="fancybox-title-over">Imagen ' + (currentIndex + 1) + ' de ' + currentArray.length + (title.length ? ':&nbsp;' + title : '') + '</span>';
+    }
+  });
+});
+</script>
+
+
+    <style>
+		 * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #2e324f;
+            color: #FFF;
+            font-family: "adineue PRO";
+            font-size: 1em;
+            text-align: center;
+        }
+
+        header img {
+            width: 60%;
+            height: auto;
+            max-width: 400px;
+        }
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+        nav a {
+            margin: 0 18px;
+            text-decoration: none;
+            color: #1F2135;
+            font-size: 1.5em;
+            background-color: #d0d0d0;
+            padding: 4px 9px;
+            border-radius: 20px;
+			min-width: 100px;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #d0d0d0;
+        }
+        /* Estilos generales */
+        #contenido {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+
+       #servicios-principal {
+    display: flex;
+    flex-direction: row;  /* Asegura que los elementos estén en fila */
+    align-items: flex-start;  /* Alinea los elementos al principio del contenedor (parte superior) */
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    width: 100%;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    gap: 20px; /* Espacio entre la imagen y el artículo */
+}
+
+/* La imagen de los servicios */
+#img-servicios {
+    width: 45%;
+    max-width: 400px;
+    margin-right: 20px;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+/* El contenedor de texto, 'nuestros-servicios' */
+#nuestros-servicios {
+    width: 50%;  /* Puedes ajustar el porcentaje según el espacio que necesitas */
+    padding: 0 20px;
+    text-align: left;
+    margin: 0;  /* Elimina los márgenes innecesarios */
+}
+
+        h2 {
+            color: #fff;
+            font-family: ROSSETI;
+            font-size: 1.5em;
+            margin: 10px 0;
+			text-align:center;
+			padding-bottom: center;
+        }
+h3 {
+            color: #2e324f;
+            font-family: ROSSETI;
+            font-size: 1.5em;
+            margin: 10px 0;
+			text-align:center;
+			padding-bottom: center;
+        }
+
+        .texto {
+            color: #d0d0d0;
+            font-family: "adineue PRO";
+            font-size: 0.7em;
+            margin: 10px 0;
+        }
+
+        section#servicios-tipos {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        article {
+            background: #5b0ba8;
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            min-width: 280px;
+            text-align: justify;
+            margin-bottom: 5em; /* Espacio entre los artículos */
+        }
+
+        article h3 {
+            font-size: 1.3em;
+            color: #fff;
+        }
+
+        article p {
+            color: #d0d0d0;
+        }
+
+        /* Estilo para el reproductor de audio */
+        audio {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 10px;
+        }
+
+        /* Estilos para el iframe del video */
+        iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        ol {
+            color: #d0d0d0;
+            padding-left: 20px;
+            list-style-type: disc; /* Cambia los números o guiones a puntos */
+        }
+
+        ol li {
+            margin: 10px 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            #servicios-principal {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            #img-servicios {
+                width: 80%;
+                margin: 0 0 20px 0;
+            }
+
+            #nuestros-servicios {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                width: 20%;
+            }
+
+            nav a {
+                font-size: 1em;
+                margin: 10px 0;
+            }
+
+            #img-servicios, article#nuestros-servicios, article#servicio1, article#servicio2, article#servicio3 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img class="side-image" src="img/izq.png" alt="Imagen Izquierda" />
+            <h1>
+                <a href="inicio.html">
+                    <img class="fade" alt="Logo The Eras" src="img/LOGO THE ERAS (1).png" />
+                </a>
+            </h1>
+            <img class="side-image" src="img/der.png" alt="Imagen Derecha" />
+        </div>
+    </header>
+
+    <nav>
+        <a href="inicio.html">INICIO</a>
+        <a href="sobre la gira.html">SOBRE LA GIRA</a>
+        <a href="contenido exclusivo.html">CONTENIDO EXCLUSIVO</a>
+        <a href="recuerdos del tour.html">RECUERDOS DEL TOUR</a>
+        <a href="proximo concierto.html">PRÓXIMO CONCIERTO</a>
+    </nav>
+
+<section id="contenido">
+  <!-- Dos secciones (contenedores) una para dos columnas y otra para tres columnas -->
+  
+  <section id="servicios-principal">
+    <img id="img-servicios" src="img/Diseño sin título (1).png" alt="THE ERAS TOUR">
+    
+    <article id="nuestros-servicios">
+      <h2>LA MEJOR GIRA DE TODOS LOS TIEMPOS</h2>
+      <p>
+La Eras Tour de Taylor Swiftha sido una de las giras más espectaculares y culturalmente impactantes de la historia reciente, celebrando toda su carrera musical con una producción de altísimo nivel, un repertorio de más de 40 canciones y una conexión única con sus fans. Esta gira no solo rompió récords de taquilla, sino que se convirtió en un fenómeno global, abarcando múltiples continentes y dejando una huella imborrable en la historia de la música en vivo. 
+      </p>
+    </article>
+  </section>
+
+  <section id="servicios-tipos">
+    <article id="servicio1">
+      <h3>Audios exclusivos del show</h3>
+      <p>
+Durante The Eras Tour, Taylor Swift ofreció a sus fans algunos audios exclusivos de sus conciertos, permitiendo revivir momentos únicos y especiales de la gira.       </p>
+      <hr />
+      <div>
+<audio id="audio-servicios-1" controls>
+  <source src="audio/modernidad.mp3" type="audio/mpeg" />
+  <!-- Para Chrome, Firefox u Opera, se debe tener el mismo archivo en formato OGG y escribir:
+       <source src="audio/modernidad.ogg" type="audio/ogg" /> -->
+</audio>
+
+<audio id="audio-servicios-2" controls>
+  <source src="audio/Mixfuckedup-PeliculaLenta.mp3" type="audio/mpeg" />
+  <!-- Para Chrome, Firefox u Opera, se debe tener el mismo archivo en formato OGG y escribir:
+       <source src="audio/Mixfuckedup-PeliculaLenta.ogg" type="audio/ogg" /> -->
+</audio>
+
+		  
+      </div>
+    </article>
+
+    <article id="servicio2">
+      <h3>Ve lo mejor del The Eras Tour en DISNEY+</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TB72bNlQmSc?si=XLXa5-WylbBiNFo5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      <!-- Esta etiqueta iframe es una caja que permite colocar una página web externa o un enlace URL. -->
+      <!-- Todo este código se copia desde el video de YouTube con el botón compartir y luego con el botón insertar vínculo; también se le cambian el ancho y alto para adaptarlo a nuestra sección -->
+    </article>
+
+    <article id="servicio3">
+      <h3>Lista de Invitados</h3>
+      <ol>
+       <li>Paramore</li>
+<li>beabadoobee</li>
+<li>Gracie Abrams</li>
+<li>Phoebe Bridgers</li>
+<li>girl in red</li>
+<li>Sabrina Carpenter</li>
+      </ol>
+    </article>
+  </section>
+</section>
+
+
+    <footer style="background: #2e324f; color: #FFF; padding: 20px; text-align: center; font-size: 0.6em; font-family: 'adineue PRO'">
+        <div>
+            <p>© 2024 The Eras Tour. Todos los derechos reservados.</p>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <a href="https://www.instagram.com/taylorswift/" target="_blank" style="color: #FFF; margin: 0 10px;">Instagram</a>
+            <a href="https://x.com/taylorswift13" target="_blank" style="color: #FFF; margin: 0 10px;">X</a>
+            <a href="https://www.facebook.com/TaylorSwift/" target="_blank" style="color: #FFF; margin: 0 10px;">Facebook</a>
+        </div>
+    </footer>
+</body>
+</html>
+

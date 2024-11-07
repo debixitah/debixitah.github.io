@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Sobre la gira</title>
+    <meta name="description" content="Información acerca de la gira" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/LOGO THE ERAS.ico" type="image/x-icon" />
+    <meta name="author" content="Nombre y Apellido">
+    <link rel="stylesheet" href="estilos/estilos.css" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
+    <link rel="stylesheet" href="css/fancybox.css" />
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: true,
+                directionNav: true,
+                slideshowSpeed: 5000,
+                animationDuration: 600,
+            });
+        });
+    </script>
+
+    <style>
+		
+        /* Estilos para organizar el contenido en dos columnas */
+        #contenido {
+            display: flex;
+            justify-content: space-between; /* Espaciado entre columnas */
+            align-items: flex-start; /* Alinea el contenido de arriba */
+            min-height: 80vh; /* Ajusta la altura mínima según sea necesario */
+            padding: 20px; /* Espaciado interno */
+        }
+
+        #description-nosotros, #multimedia-nosotros {
+            width: 45%; /* Ancho de cada columna */
+            text-align: center; /* Centra el texto en cada artículo */
+        }
+
+        h2 {
+            color: #fff; /* Color azul para los títulos */
+            font-family: ROSSETI; /* Fuente para los títulos */
+            font-size: 1.5em; /* Tamaño de fuente para los títulos */
+            margin: 20px 0; /* Espaciado entre los títulos y el texto */
+        }
+
+        .texto {
+            color: #d0d0d0; /* Color para el texto de los párrafos */
+            font-family: "adineue PRO"; /* Fuente para los párrafos */
+            font-size: 0.98em; /* Tamaño de fuente para los párrafos */
+        }
+
+        video {
+            width: 100%; /* Ajusta el ancho del video */
+            height:inherit;
+			padding-top: 50px;/* Mantiene la proporción */
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #2e324f;
+            color: #FFF;
+            font-family: "adineue PRO";
+            font-size: 1em;
+            text-align: center;
+        }
+
+        header img {
+            width: 60%;
+            height: auto;
+            max-width: 400px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 30px auto;
+        }
+
+        nav a {
+            margin: 0 18px;
+            text-decoration: none;
+            color: #1F2135;
+            font-size: 1.5em;
+            background-color: #d0d0d0;
+            padding: 4px 9px;
+            border-radius: 20px;
+            min-width: 100px;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #d0d0d0;
+        }
+
+        section#contenedor {
+            background: #fff;
+            margin: 10px auto;
+            max-width: 90%;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            text-align: center;
+            align-content: center;
+        }
+
+        aside {
+            width: 35%;
+            background: #2e324f;
+            border-radius: 0.5em;
+            padding: 10px;
+            font-size: 0.7em;
+            display: flex; /* Utilizar flexbox */
+            flex-direction: column; /* Colocar elementos en columna */
+            justify-content: center; /* Centrar verticalmente */
+            align-items: center; /* Centrar horizontalmente */
+        }
+
+        aside p {
+            margin-top: 15px; 
+			/* Espacio entre la imagen y el texto */
+        }
+
+        /* Cambiar color del texto de las figcaption */
+        .figcaption {
+            color: #2e324f; /* Cambia el color a azul */
+            margin-top: 10px; /* Espacio entre la imagen y la descripción */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header img {
+                width: 20%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                width: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img class="side-image" src="img/izq.png" alt="Imagen Izquierda" />
+            <h1>
+                <a href="inicio.html">
+                    <img class="fade" alt="Logo The Eras" src="img/LOGO THE ERAS (1).png" />
+                </a>
+            </h1>
+            <img class="side-image" src="img/der.png" alt="Imagen Derecha" />
+        </div>
+    </header>
+
+    <nav>
+        <a href="inicio.html">INICIO</a>
+        <a href="sobre la gira.html">SOBRE LA GIRA</a>
+        <a href="contenido exclusivo.html">CONTENIDO EXCLUSIVO</a>
+        <a href="recuerdos del tour.html">RECUERDOS DEL TOUR</a>
+        <a href="proximo concierto.html">PRÓXIMO CONCIERTO</a>
+    </nav>
+
+    <section id="contenido">
+        <article id="description-nosotros">
+            <h2 class="titulo">PROPÓSITO</h2>
+            <p class="texto">Nuestro propósito es celebrar la música y las diversas eras de Taylor Swift a través de una experiencia única e inolvidable en "The Eras Tour". Nos comprometemos a ofrecer a los fans un espectáculo de alta calidad que resalte la evolución artística de Taylor, promoviendo la conexión emocional entre los artistas y el público. Cada concierto no solo es una actuación, sino una celebración de las historias que ha contado a lo largo de su carrera, creando un espacio donde la música une a las personas y se convierte en parte de sus recuerdos más preciados.</p>
+            <hr />
+            <h2 class="titulo">META</h2>
+            <p class="texto">Nuestra meta es ser reconocidos como el tour de conciertos más innovador y emocionante, que no solo entretiene, sino que también inspira a las personas a conectar con las distintas fases de la vida de una artista. Aspiramos a crear recuerdos duraderos que resuenen en cada asistente, reflejando el impacto cultural de la música en nuestras vidas.</p>
+            <hr />
+            <h2 class="titulo">PRINCIPIOS</h2>
+            <p class="texto">Valoramos la creatividad, la diversidad y la autenticidad. Creemos que cada era de Taylor Swift cuenta una historia única y merece ser celebrada en su totalidad. Fomentamos un ambiente inclusivo donde cada fan se sienta bienvenido y parte de esta experiencia colectiva, promoviendo la positividad y el respeto en cada evento. Nuestros principios guían no solo la producción de cada concierto, sino también nuestra interacción con los fans, creando un espacio seguro y vibrante donde todos puedan disfrutar de la música sin barreras. En "The Eras Tour", cada voz cuenta, y cada historia es parte del viaje que compartimos juntos.</p>
+        </article>
+
+<article id="multimedia-nosotros">
+    <video id="video-nosotros" controls preload>
+        <source src="Taylor Swift - I Can Do It With A Broken Heart (Official Video) - Taylor Swift (1080p, h264, youtube).mp4" type="video/mp4" />
+    </video>
+    <h3 style="font-family: ROSSETI; font-size: 1.4em; color: #fff; text-align: center; margin-top: 10px;">TAYLOR SWIFT - I CAN DO IT WITH A BROKEN HEART (TOUR'S BEHIND THE SCENES)</h3>
+</article>
+
+    </section>
+
+    <footer style="background: #2e324f; color: #FFF; padding: 20px; text-align: center; font-size: 0.6em; font-family: 'adineue PRO'">
+        <div>
+            <p>© 2024 The Eras Tour. Todos los derechos reservados.</p>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <a href="https://www.instagram.com/taylorswift/" target="_blank" style="color: #FFF; margin: 0 10px;">Instagram</a>
+            <a href="https://x.com/taylorswift13" target="_blank" style="color: #FFF; margin: 0 10px;">X</a>
+            <a href="https://www.facebook.com/TaylorSwift/" target="_blank" style="color: #FFF; margin: 0 10px;">Facebook</a>
+        </div>
+    </footer>
+</body>
+</html>
+

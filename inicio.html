@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>The Eras Tour</title>
+    <meta name="description" content="Con este texto se describe la página web para los buscadores" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/LOGO THE ERAS.ico (1).png" type="image/x-icon" />
+    <link rel="author" href="img/humans.txt" type="text/plain" />
+    <link rel="stylesheet" href="estilos/estilos.css" />
+    <link rel="stylesheet" href="css/fancybox.css" />
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css" integrity="sha512-c7jR/kCnu09ZrAKsWXsI/x9HCO9kkpHw4Ftqhofqs+I2hNxalK5RGwo/IAhW3iqCHIw55wBSSCFlm8JP0sw2Zw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js" integrity="sha512-BmoWLYENsSaAfQfHszJM7cLiy9Ml4I0n1YtBQKfx8PaYpZ3SoTXfj3YiDNn0GAdveOCNbK8WqQQYaSb0CMjTHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: true,
+                directionNav: true,
+                slideshowSpeed: 5000,
+                animationDuration: 600,
+            });
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #2e324f;
+            color: #FFF;
+            font-family: "adineue PRO";
+            font-size: 1em;
+            text-align: center;
+        }
+
+        header img {
+            width: 60%;
+            height: auto;
+            max-width: 400px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 30px auto;
+        }
+
+        nav a {
+            margin: 0 18px;
+            text-decoration: none;
+            color: #1F2135;
+            font-size: 1.5em;
+            background-color: #d0d0d0;
+            padding: 4px 9px;
+            border-radius: 20px;
+            min-width: 100px;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #d0d0d0;
+        }
+        section#contenedor {
+            background: #fff;
+            margin: 10px auto;
+            max-width: 90%;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            text-align: center;
+            align-content: center;
+        }
+
+        aside {
+    width: 45%;
+    background: #2e324f;
+    border-radius: 0.5em;
+    padding: 30px;
+    font-size: 0.7em;
+    display: flex; /* Utilizar flexbox */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: flex-start; /* Alinea los elementos al inicio (izquierda) */
+    margin-left: 0; /* Elimina cualquier margen que pueda haber */
+}
+
+
+        aside p {
+            margin-top: 15px; /* Espacio entre la imagen y el texto */
+        }
+
+        /* Cambiar color del texto de las figcaption */
+        .figcaption {
+            color: #2e324f; /* Cambia el color a azul */
+            margin-top: 10px; /* Espacio entre la imagen y la descripción */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header img {
+                width: 20%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                width: 20%;
+            }
+        }
+		
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img class="side-image" src="img/izq.png" alt="Imagen Izquierda" />
+            <h1>
+                <a href="inicio.html">
+                    <img class="fade" alt="Logo The Eras" src="img/LOGO THE ERAS (1).png" />
+                </a>
+            </h1>
+            <img class="side-image" src="img/der.png" alt="Imagen Derecha" />
+        </div>
+    </header>
+
+    <nav>
+        <a href="inicio.html">INICIO</a>
+        <a href="sobre la gira.html">SOBRE LA GIRA</a>
+        <a href="contenido exclusivo.html">CONTENIDO EXCLUSIVO</a>
+        <a href="recuerdos del tour.html">RECUERDOS DEL TOUR</a>
+        <a href="proximo concierto.html">PRÓXIMO CONCIERTO</a>
+    </nav>
+
+    <section id="contenedor">
+        <section id="principal">
+            <article id="galeria1">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src="img/5.png" alt="Descripción de la imagen 1" />
+                            <p class="figcaption">Ya disponible en Disney+</p>
+                        </li>
+                        <li>
+                            <img src="img/1.png" alt="Descripción de la imagen 2" />
+                            <p class="figcaption">Sesiones acústicas</p>
+                        </li>
+                        <li>
+                            <img src="img/2.png" alt="Descripción de la imagen 3" />
+                            <p class="figcaption">Performances en vivo</p>
+                        </li>
+                        <li>
+                            <img src="img/3.png" alt="Descripción de la imagen 4" />
+                            <p class="figcaption">Shows en más 20 países a lo largo de cinco continentes</p>
+                        </li>
+                        <li>
+                            <img src="img/4.png" alt="Descripción de la imagen 5" />
+                            <p class="figcaption">Revive lo mejor del The Eras Tour</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <aside>
+            <a href="img/poster (5).png" target="_blank">
+                <img src="img/poster (5).png" alt="Redes Sociales" />
+            </a>
+            <p>"Eras Tour" es la sexta gira de conciertos de Taylor Swift, que comenzó en marzo de 2023 y está programada para continuar hasta diciembre de 2024. Es una gira muy significativa que celebra todas las "eras" o épocas musicales de su carrera.</p>
+        </aside>
+    </section>
+
+    <footer style="background: #2e324f; color: #FFF; padding: 20px; text-align: center; font-size: 0.6em; font-family: 'adineue PRO'">
+        <div>
+            <p>© 2024 The Eras Tour. Todos los derechos reservados.</p>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <a href="https://www.instagram.com/taylorswift/" target="_blank" style="color: #FFF; margin: 0 10px;">Instagram</a>
+            <a href="https://x.com/taylorswift13" target="_blank" style="color: #FFF; margin: 0 10px;">X</a>
+            <a href="https://www.facebook.com/TaylorSwift/" target="_blank" style="color: #FFF; margin: 0 10px;">Facebook</a>
+        </div>
+    </footer>
+
+</body>
+</html>
